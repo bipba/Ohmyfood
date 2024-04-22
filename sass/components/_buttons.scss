@@ -1,0 +1,78 @@
+@use "./../utils/mixins";
+@use "./../utils/variables";
+// boutons linear gradients
+%button {
+  @extend %buttons;
+  @include shadow-btn(4px, 10px, 0.25);
+  &:hover {
+    @include shadow-btn(4px, 5px, 0.4);
+    @extend %shadow-btn-two;
+  }
+}
+.btn,
+.btn-2 {
+  @extend %button;
+}
+.btn-2 {
+  margin-top: 33px;
+  width: 186px;
+}
+// div fonctionnement & ses bouttons
+
+.Fonctionnement {
+  counter-reset: numbers;
+  @include flex-type(column, align-content);
+  margin: 50px 20px;
+  & p {
+    height: 31px;
+    margin: 0 0 25px 0;
+  }
+  & ol {
+    position: relative;
+    @include flex-type(row, align-items);
+    gap: 25px;
+    @media (max-width: $breakpoint) {
+      @include flex-type(column, align-items);
+    }
+    & li {
+      &::before {
+        content: counter(numbers);
+        counter-increment: numbers;
+        @include typo-txt(14.18px, 500);
+        @include sizing(24px, 24px);
+        background-color: $prymary-color;
+        color: white;
+        border-radius: 50px;
+        @extend %grid;
+        position: absolute;
+        transform: translateX(-42px) translateY(-2px);
+      }
+      background-color: $background-resto-color;
+      padding: 26.7px 30px;
+      border-radius: 20px;
+      // width: 311.49px;
+      @include shadow-btn(4px, 15px, 0.15);
+      @media (max-width: $breakpoint) {
+        width: 100%;
+      }
+      // @media (max-width:360px) {width: 280px;
+      // }
+    }
+    & li a {
+      color: black;
+    }
+    & li:hover {
+      @extend %shadow-btn-two;
+    }
+    & i {
+      color: $color-li-fonctionnement;
+      margin-right: 20px;
+    }
+    & .fa-solid {
+      margin-right: 22px;
+    }
+    & .fa-store {
+      color: $prymary-color;
+    }
+  }
+}

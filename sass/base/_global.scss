@@ -1,0 +1,94 @@
+@import "./../utils/mixins";
+@import "./../utils/variables";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border-style: none;
+  outline: none;
+}
+// alignements generaux
+header .logo,
+form,
+.top-box p,
+h1,
+.menus h3 {
+  text-align: center;
+}
+// typo text pour chaques éléments
+.Fonctionnement li,
+button,
+input {
+  @include typo-txt;
+}
+.Fonctionnement p {
+  @include typo-txt(24px, 700);
+}
+
+.top-box {
+  h1 {
+    @include typo-txt(40px, 700);
+    @media (max-width: $breakpoint) {
+      @include typo-txt(24px, 700);
+    }
+  }
+  p {
+    @include typo-txt(18px, 300);
+    margin: 30px auto;
+  }
+}
+h2 {
+  @include typo-txt(24px, 700);
+}
+span {
+  color: black;
+}
+.card h3,
+.card p {
+  color: black;
+}
+footer h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 300;
+}
+.menus {
+  h3 {
+    font-family: "Shrikhand", "cursive";
+    @include typo-txt(28px, 400);
+  }
+  h4 {
+    @include typo-txt(16px, 300);
+    border-bottom: solid 3px $tertiary-color;
+    width: 40px;
+    padding: 35px 0 4px 0;
+    margin-bottom: 8px;
+  }
+  h5 {
+    @include typo-txt(18px, 500);
+  }
+  p {
+    @include typo-txt(15.04px, 300);
+    .price,
+    .euro {
+      color: $footer_color;
+      @include typo-txt(15px, 500);
+    }
+  }
+}

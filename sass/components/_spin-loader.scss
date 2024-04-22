@@ -1,0 +1,54 @@
+@use "./../utils/mixins";
+@use "./../utils/variables";
+@use "./../utils/animat";
+
+.spin-loader{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    height: 100vh;
+    inset: 0;
+    opacity: .85;
+    animation: clear-loader forwards 3s;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    
+}
+.sphere{
+    margin: 0 auto;
+    border-radius: 50%;
+    @include sizing(50px, 50px);
+    // width: 55px;
+    // height:55px;
+    @include typo-txt (39px,bolder);
+    // margin: 35px 35px;
+    transition: margin 2s;
+    @extend %grid;
+    font-family: $titles-logo-font;
+    animation: slide-loader forwards 2s;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    @media (max-width:$breakpoint-two){
+        animation: slide-loader2 forwards 2s;
+        animation-duration: 1s;
+        animation-iteration-count: 2;
+    }
+    
+    position: relative;
+    &.s1,&.s2{
+        background-color: $secondary-color;
+        animation-delay: .0s;
+    }
+    &.s3,&.s4{
+        background-color: $prymary-color;
+        animation-delay: .2s;
+     
+    }
+    &.s5{
+        background-color: $tertiary-color;
+        animation-delay: .4s;
+
+    }
+
+}

@@ -1,0 +1,48 @@
+@use"./../utils/mixins";
+@use "./../utils/variables";
+header {
+        .logo {
+        background-color: white;
+        position: relative;
+    @media (max-width:variables.$breakpoint) {@include mixins.shadow-btn(2px, 4px,0.15);
+        }
+        .fa-solid{
+            color: black;
+            float: left;
+            margin: 40px 0 0 15px;
+            font-weight: bolder;
+            @media(max-width: $breakpoint){
+                margin: 23px 0 0 15px;
+            }
+        }
+        & img {
+            margin: 29px 0;
+        //  width: 200px;
+                height: 34.2px;
+            @media (max-width:variables.$breakpoint){
+            margin:11.5px;
+            // width: 197.5px;
+            height: 36px;
+        }
+    }
+}
+}
+form {
+        height: 50px;
+        background-color: $color-locolisation;
+        @media (max-width:variables.$breakpoint) {@include mixins.shadow-btn(4px, 4px, 0.25);
+    } 
+    input {
+        @include sizing(124px,19px);
+        margin: 14px 0 14px 16px;
+        background-color: $color-locolisation;
+    }
+}
+.top-box {
+    background-color: $background-resto-color;
+    @include flex-type(column,align-items);
+   padding: 30px 20px;
+   @media (max-width:$breakpoint){
+    margin-top: 5px;
+   }
+}

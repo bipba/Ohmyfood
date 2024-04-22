@@ -1,0 +1,74 @@
+@use "./../utils/mixins";
+@use "./../utils/variables";
+
+.restos {
+  background-color: $background-resto-color;
+  padding: 40px 40px 0 40px;
+  @media (max-width: $breakpoint) {
+    padding:40px 0px 30px 0;
+  }
+  & h2 {
+    padding: 0px 0 0px 70px;
+    @media (max-width: $breakpoint) {
+      padding:0px 0px 0px 20px;
+    }
+  }
+  .restos__cards {
+    @include flex-type(row, justify-content);
+    gap: 50px;
+    padding: 30px 50px 50px 50px;
+    @media (max-width: $breakpoint) {
+      padding: 25px 20px 50px 20px;
+      @include flex-type(column, align-items);
+      gap: 30px;
+    }
+    a {
+      width: 45%;
+      position: relative;
+      @media (max-width: $breakpoint) {
+        flex-grow: 1;
+        width: 100%;
+      }
+    }
+    // mise en place de l'avenant nouveau
+    .new::before {
+      content: "Nouveau";
+      padding: 10px 10px;
+      position: absolute;
+      background-color: $tertiary-color;
+      color: black;
+      top: 1rem;
+      right: 1rem;
+    }
+    .card img {
+      border-radius: 25px 25px 0 0;
+      @include sizing(100%, 173px);
+      object-fit: cover;
+      @media (max-width: $breakpoint) {
+        @include sizing(100%, 173px);
+      }
+    }
+    .card-content {
+      position: relative;
+      margin-top: -4px;
+      height: 78px;
+      background-color: white;
+      border-radius: 0 0 25px 25px;
+      &::before {
+        @include fas-heart;
+      }
+      &::after {
+        @include fas-heart(900, 0, transparent);
+        background-image: linear-gradient($secondary-color, $prymary-color);
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+    h3,
+    p {
+      padding: 10px 66px 0 25px;
+    }
+  }
+}
