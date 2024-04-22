@@ -1,14 +1,7 @@
 @use "./../utils/variables";
 @use "./../utils/mixins";
 @use "./../utils/animat";
-@keyframes slideRotate {
-  0% {
-    transform: rotate -260deg;
-  }
-  100% {
-    transform: rotate 0;
-  }
-}
+
 .img_restaurant {
   object-fit: cover;
   width: 100%;
@@ -47,6 +40,7 @@
     @media (max-width: 768px) {
       @include sizing(100%, 27px);
       text-align: start;
+      padding-right: 26px;
     }
     &::before {
       @include fas-heart(400, 1, black, 187px, 41px);
@@ -93,7 +87,6 @@
     background-color: white;
     cursor: pointer;
     @include shadow-btn(4px,15px,.1);
-    // animation: anim-list 2s;
     animation: scale-list .5s;
     animation-fill-mode: backwards;
     .validation {
@@ -103,7 +96,7 @@
       margin-right: -55px;
       width: 55px;
       flex-shrink: 0;
-      transition: all 250ms;
+      transition: all 300ms;
     }
     .fa-solid {
       font-size: 20px;

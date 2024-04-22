@@ -1,5 +1,6 @@
 @use "./mixins";
 @use "./variables";
+// anim-list pour le check au hover dans les lignes de menu
 @keyframes anim-list {
   0% {
     transform: scale(0);
@@ -17,7 +18,7 @@
     opacity: 0;
   }
   100%{
-    transform:translatey(1);
+    transform:translatey(0);
     opacity: 1;
   }
   
@@ -30,17 +31,16 @@
   transform: scale(0);
 }
 }
-@keyframes slide-loader2 {
-  0%{top: 0; transform: scale(1);}
-  50%{transform: scale(.5);opacity: .5;}
-  80%{transform: scale(1.4)}
-  100%{top: 47%;transform: scale(1);}
-  
-}
 @keyframes slide-loader {
   0%{top: 0;}
   50%{transform: scale(2);opacity: .5;}
   80%{transform: scale(1)}
   100%{top: 47%;transform: scale(2.558);}
+  }
+@keyframes slide-loader2 {
+  0%{top: 0; transform: scale(1);}
+  50%{transform: scale(.5);opacity: .5;}
+  80%{transform: scale(1.4)}
+  100%{top: 47%;transform: scale(1);}
   
 }
