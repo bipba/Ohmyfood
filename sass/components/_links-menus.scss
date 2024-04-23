@@ -1,7 +1,6 @@
 @use "./../utils/variables";
 @use "./../utils/mixins";
 @use "./../utils/animat";
-
 .img_restaurant {
   object-fit: cover;
   width: 100%;
@@ -10,16 +9,6 @@
     height: 275px;
   }
 }
-
-@keyframes scale-list {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .menus {
   position: relative;
   display: grid;
@@ -30,14 +19,14 @@
   width: 80%;
   margin: auto;
   margin-top: -37px;
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint) {
     width: 100%;
     padding: 0 15px 20px 15px;
   }
   h3 {
     margin: 37px 0 47px 0;
     @include sizing(100%, 41px);
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-two) {
       @include sizing(100%, 27px);
       text-align: start;
       padding-right: 26px;
@@ -45,14 +34,14 @@
     &::before {
       @include fas-heart(400, 1, black, 187px, 41px);
       @media (max-width: $breakpoint-two) {
-        @include fas-heart(400, 1, black, 8px, 41px);
+        @include fas-heart(400, 1, black, 10px, 41px);
       }
     }
     &::after {
       @include fas-heart(900, 0, transparent, 187px, 41px);
       background-image: linear-gradient($secondary-color, $prymary-color);
-      @media (max-width: 768px) {
-        @include fas-heart(900, 0, transparent, 8px, 41px);
+      @media (max-width: $breakpoint-two) {
+        @include fas-heart(900, 0, transparent, 10px, 41px);
       }
     }
     &:hover::after {
@@ -74,6 +63,7 @@
     margin-left: auto;
     padding: 16px;
   }
+  // usage forLoop "slack" des nth-child de chaques élements de la liste menu
   &__elements {
     @for $i from 3 through 14 {
       &:nth-child(#{$i}) {

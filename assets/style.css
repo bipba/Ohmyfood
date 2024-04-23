@@ -504,14 +504,6 @@ footer h2 {
   }
 }
 
-@keyframes scale-list {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .menus {
   position: relative;
   display: grid;
@@ -572,7 +564,7 @@ footer h2 {
     opacity: 1;
     font-size: xx-large;
     position: absolute;
-    right: 8px;
+    right: 10px;
     top: 41px;
     color: black;
     -webkit-background-clip: text;
@@ -611,7 +603,7 @@ footer h2 {
     opacity: 0;
     font-size: xx-large;
     position: absolute;
-    right: 8px;
+    right: 10px;
     top: 41px;
     color: transparent;
     -webkit-background-clip: text;
@@ -795,8 +787,7 @@ footer h2 {
   height: 100vh;
   inset: 0;
   opacity: 0.85;
-  animation: clear-loader forwards 3s;
-  display: block;
+  animation: clear-loader forwards 2.9s;
   display: flex;
   flex-direction: row;
 }
@@ -808,17 +799,16 @@ footer h2 {
   height: 50px;
   font-size: 39px;
   font-weight: bolder;
-  transition: margin 2s;
   font-family: "shrikhand,cursive";
-  animation: slide-loader forwards 2s;
+  animation: slide-loader forwards 1.5s;
   animation-duration: 1s;
   animation-iteration-count: 2;
   position: relative;
 }
 @media (max-width: 768px) {
   .sphere {
-    animation: slide-loader2 forwards 2s;
-    animation-duration: 1s;
+    animation: slide-loader2 forwards 1.5s;
+    animation-duration: 0.75s;
     animation-iteration-count: 2;
   }
 }

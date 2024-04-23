@@ -17,11 +17,9 @@ header {
         }
         & img {
             margin: 29px 0;
-        //  width: 200px;
                 height: 34.2px;
             @media (max-width:variables.$breakpoint){
             margin:11.5px;
-            // width: 197.5px;
             height: 36px;
         }
     }

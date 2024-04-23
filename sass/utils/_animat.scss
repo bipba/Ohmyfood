@@ -1,6 +1,6 @@
 @use "./mixins";
 @use "./variables";
-// anim-list pour le check au hover dans les lignes de menu
+// effets pour le "check vert" au hover dans les lignes de menu
 @keyframes anim-list {
   0% {
     transform: scale(0);
@@ -12,6 +12,7 @@
     transform: scale(1);
   }
 }
+// effet apparition menu
 @keyframes scale-list {
   0%{
     transform: translatey(50%);
@@ -21,8 +22,8 @@
     transform:translatey(0);
     opacity: 1;
   }
+  }
   
-}
 @keyframes clear-loader {
 0%,95%{
   transform: scale(1);
@@ -31,6 +32,7 @@
   transform: scale(0);
 }
 }
+// effet tombant des lettres OHMYFOOD au téléchargement desktop & mobile
 @keyframes slide-loader {
   0%{top: 0;}
   50%{transform: scale(2);opacity: .5;}

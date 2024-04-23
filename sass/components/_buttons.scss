@@ -50,13 +50,10 @@
       background-color: $background-resto-color;
       padding: 26.7px 30px;
       border-radius: 20px;
-      // width: 311.49px;
       @include shadow-btn(4px, 15px, 0.15);
       @media (max-width: $breakpoint) {
         width: 100%;
       }
-      // @media (max-width:360px) {width: 280px;
-      // }
     }
     & li a {
       color: black;

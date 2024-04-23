@@ -3,9 +3,6 @@
   box-shadow: 0px $y $blur 0px rgba(0, 0, 0, $opacity);
 }
 %shadow-btn-two {
-  // -webkit-transition: opacity 1s;
-  // -o-transition: opacity 1s;
-  // transition: opacity 1s;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
   opacity: 0.8;
@@ -23,6 +20,7 @@
   display: grid;
   place-items: center;
 }
+
 %over-flow {
   overflow: hidden;
   white-space: nowrap;
@@ -57,7 +55,6 @@
   font-variant: normal;
   font-style: normal;
   text-rendering: auto;
-  // -webkit-font-smoothing:antialiased;
   font-family: "Font Awesome 5 free";
   font-weight: $font-weight;
   opacity: $opacity;
