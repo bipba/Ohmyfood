@@ -36,11 +36,12 @@
   font-weight: $font-weight;
 }
 
-@mixin flex-type($column, $axe-align) {
+@mixin flex-type($column, $axe-align, $space: 25px) {
   display: flex;
   flex-direction: $column;
   #{$axe-align}: center;
   flex-wrap: wrap;
+  gap: $space;
 }
 
 @mixin fas-heart(

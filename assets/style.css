@@ -98,12 +98,8 @@ h2 {
   font-weight: 700;
 }
 
-span {
-  color: black;
-}
-
 .card h3,
-.card p {
+.card p, span {
   color: black;
 }
 
@@ -180,11 +176,11 @@ footer h2 {
   }
 }
 .restos h2 {
-  padding: 0px 0 0px 70px;
+  padding-left: 70px;
 }
 @media (max-width: 1024px) {
   .restos h2 {
-    padding: 0px 0px 0px 20px;
+    padding-left: 20px;
   }
 }
 .restos .restos__cards {
@@ -228,14 +224,7 @@ footer h2 {
   border-radius: 25px 25px 0 0;
   width: 100%;
   height: 173px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 1024px) {
-  .restos .restos__cards .card img {
-    width: 100%;
-    height: 173px;
-  }
+  object-fit: cover;
 }
 .restos .restos__cards .card-content {
   position: relative;
@@ -258,8 +247,7 @@ footer h2 {
   right: 30px;
   top: 12px;
   color: black;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   transition: all 300ms;
 }
 .restos .restos__cards .card-content::after {
@@ -276,8 +264,7 @@ footer h2 {
   right: 30px;
   top: 12px;
   color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   transition: all 300ms;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
@@ -340,6 +327,7 @@ footer h2 {
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
+  gap: 25px;
   margin: 50px 20px;
 }
 .Fonctionnement p {
@@ -360,6 +348,7 @@ footer h2 {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    gap: 25px;
   }
 }
 .Fonctionnement ol li {
@@ -438,7 +427,7 @@ footer h2 {
     transform: scale(1.5);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 @keyframes scale-list {
@@ -492,9 +481,16 @@ footer h2 {
     transform: scale(1);
   }
 }
+@keyframes rotate-span {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateX(0);
+  }
+  100% {
+    transform: rotateX(1turn) rotateY(1turn) rotateX(1turn);
+  }
+}
 .img_restaurant {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 383px;
 }
@@ -548,8 +544,7 @@ footer h2 {
   right: 187px;
   top: 41px;
   color: black;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   transition: all 300ms;
 }
 @media (max-width: 768px) {
@@ -567,8 +562,7 @@ footer h2 {
     right: 10px;
     top: 41px;
     color: black;
-    -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     transition: all 300ms;
   }
 }
@@ -586,8 +580,7 @@ footer h2 {
   right: 187px;
   top: 41px;
   color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   transition: all 300ms;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
@@ -606,8 +599,7 @@ footer h2 {
     right: 10px;
     top: 41px;
     color: transparent;
-    -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     transition: all 300ms;
   }
 }
@@ -685,7 +677,7 @@ footer h2 {
   margin-right: 0;
 }
 .menus__elements:hover i {
-  animation: anim-list 1s ease-in-out;
+  animation: anim-list 0.7s ease-in-out;
 }
 
 .btn:hover,
@@ -726,7 +718,7 @@ footer h2 {
     transform: scale(1.5);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 @keyframes scale-list {
@@ -780,6 +772,14 @@ footer h2 {
     transform: scale(1);
   }
 }
+@keyframes rotate-span {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateX(0);
+  }
+  100% {
+    transform: rotateX(1turn) rotateY(1turn) rotateX(1turn);
+  }
+}
 .spin-loader {
   position: fixed;
   z-index: 1;
@@ -787,9 +787,12 @@ footer h2 {
   height: 100vh;
   inset: 0;
   opacity: 0.85;
-  animation: clear-loader forwards 2.9s;
+  animation: clear-loader forwards 2.7s;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0px;
 }
 
 .sphere {
@@ -801,7 +804,7 @@ footer h2 {
   font-weight: bolder;
   font-family: "shrikhand,cursive";
   animation: slide-loader forwards 1.5s;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-iteration-count: 2;
   position: relative;
 }
@@ -818,11 +821,11 @@ footer h2 {
 }
 .sphere.s3, .sphere.s4 {
   background-color: #9356dc;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 .sphere.s5 {
   background-color: #99e2d0;
-  animation-delay: 0.4s;
+  animation-delay: 0.6s;
 }
 
 .btn:hover,
@@ -865,8 +868,8 @@ footer {
     flex-direction: row-reverse;
     align-items: center;
     flex-wrap: wrap;
-    height: 114px;
     gap: 16px;
+    height: 114px;
   }
   footer .one {
     order: 3;
@@ -981,6 +984,7 @@ form input {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  gap: 25px;
   padding: 30px 20px;
 }
 @media (max-width: 1024px) {
@@ -1027,7 +1031,7 @@ form input {
     transform: scale(1.5);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 @keyframes scale-list {
@@ -1079,6 +1083,14 @@ form input {
   100% {
     top: 47%;
     transform: scale(1);
+  }
+}
+@keyframes rotate-span {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateX(0);
+  }
+  100% {
+    transform: rotateX(1turn) rotateY(1turn) rotateX(1turn);
   }
 }
 .btn:hover,

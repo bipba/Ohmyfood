@@ -5,13 +5,12 @@ footer{
     padding: 18.5px 25px 18.5px 25px;
     
     @media (min-width:$breakpoint){
-        @include flex-type(row-reverse,align-items);
+        @include flex-type(row-reverse,align-items, 16px);
         height: 114px;
         .one{order: 3;}
         .two{order: 2;padding-right: 20px;}
     .three{order: 1;}
     .four{padding-right: 60px;}
-    gap: 16px;
     }
 h2 {
    @include sizing(139px,27px);

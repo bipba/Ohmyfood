@@ -3,8 +3,9 @@
 @use "./../utils/animat";
 .img_restaurant {
   object-fit: cover;
-  width: 100%;
-  height: 383px;
+  @include sizing(100%, 383px);
+  // width: 100%;
+  // height: 383px;
   @media (max-width: 1024px) {
     height: 275px;
   }
@@ -96,7 +97,7 @@
         margin-right: 0;
       }
       i {
-        animation: anim-list 1s ease-in-out;
+        animation: anim-list .7s ease-in-out;
       }
     }
   }

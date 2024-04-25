@@ -21,7 +21,7 @@
 
 .Fonctionnement {
   counter-reset: numbers;
-  @include flex-type(column, align-content);
+  @include flex-type(column, align-content, 25px);
   margin: 50px 20px;
   & p {
     height: 31px;
@@ -29,10 +29,9 @@
   }
   & ol {
     position: relative;
-    @include flex-type(row, align-items);
-    gap: 25px;
+    @include flex-type(row, align-items, 25px);
     @media (max-width: $breakpoint) {
-      @include flex-type(column, align-items);
+      @include flex-type(column, align-items, 25px);
     }
     & li {
       &::before {

@@ -57,11 +57,8 @@ input {
 h2 {
   @include typo-txt(24px, 700);
 }
-span {
-  color: black;
-}
 .card h3,
-.card p {
+.card p,span {
   color: black;
 }
 footer h2 {
