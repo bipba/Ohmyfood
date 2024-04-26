@@ -3,9 +3,9 @@
 footer{
     background-color: $footer_color;
     padding: 18.5px 25px 18.5px 25px;
-    
     @media (min-width:$breakpoint){
         @include flex-type(row-reverse,align-items, 16px);
+        align-items: flex-end;
         height: 114px;
         .one{order: 3;}
         .two{order: 2;padding-right: 20px;}

@@ -13,6 +13,7 @@
     @include flex-type(row,justify-content,0px);
     }
 .sphere{
+    position: relative;
     margin: 0 auto;
     border-radius: 50%;
     @include sizing(50px, 50px);
@@ -22,13 +23,14 @@
     animation: slide-loader forwards 1.5s;
     animation-duration: 0.7s;
     animation-iteration-count: 2;
-    position: relative;
     @media (max-width:$breakpoint-two){
+        @include sizing(30px, 30px);
+        @include typo-txt (19px,bolder);
         animation: slide-loader2 forwards 1.5s;
         animation-duration: 0.75s;
         animation-iteration-count: 2;
     }
-    &.s1,&.s2{
+     &.s1,&.s2{
         background-color: $secondary-color;
         animation-delay: .0s;
     }

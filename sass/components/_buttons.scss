@@ -17,8 +17,7 @@
   margin-top: 33px;
   width: 186px;
 }
-// div fonctionnement & ses bouttons
-
+// div fonctionnement & ses bouttons avec incrementation number
 .Fonctionnement {
   counter-reset: numbers;
   @include flex-type(column, align-content, 25px);
