@@ -15,6 +15,9 @@ footer{
 h2 {
    @include sizing(139px,27px);
    @include typo-txt(18px,300);
+   @media (max-width:$breakpoint){
+    margin-bottom: 15px;
+   }
   }
 p{
     margin: 7px 0 7px 0;
